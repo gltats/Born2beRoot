@@ -35,7 +35,7 @@ Create a monitoring.sh at /usr/local/bin
                #Number of virtual processors: $virtual_processors
                #RAM utilization: $ram_utilization% ($ram_free/$ram_total)
                #Memory utilization: $memory_utilization% ($memory_free/$memory_total)
-               #Processor utilization: $processor_utilization%
+               #Processor utilization: $processor_utilization
                #Last reboot: $last_reboot
                #LVM Status: $lvm_status
                #Number of active connection: $active_connections
@@ -45,3 +45,14 @@ Create a monitoring.sh at /usr/local/bin
 ```
 
 ## PD -> Please don't copy and paste, try to understand the whole process
+
+<img src="{[BadgeURLHere](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)}" />
+<img src="{[BadgeURLHere](https://img.shields.io/badge/iTerm2-000000?style=for-the-badge&logo=iterm2&logoColor=white)}" />
+<img src="{[BadgeURLHere](https://img.shields.io/badge/GNU%20Bash-4EAA25?style=for-the-badge&logo=GNU%20Bash&logoColor=white)}" />
+
+<img src="{[BadgeURLHere](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F{username}1212%2Fhit-counter)}" />
+
+
+
+
+
