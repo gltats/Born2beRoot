@@ -17,6 +17,7 @@ Part 1.1 - First steps
 - Click Start (The Green Arrow ➡️) to start your Virtual Machine.
 
 Part 1.2 - Accessing Your Virtual Machine
+
 ```
 ⚠️ NOTE:
 - In the Virtual Machine, there is no mouse, so its necessary to use keyboard (You wil use mostly tab, space, enter 🔼 🔽).
@@ -24,35 +25,36 @@ Part 1.2 - Accessing Your Virtual Machine
 - Use the arrow keys on your keyboard 🔼 🔽 and press Enter on Install.
 ```
 
-1 Press enter on English - English or your language of preference.
-2 Press enter the country your installing this Virtual Machine.
-3 Press enter your keyboard of preference.
-4 Create a Host Name as your login, with 42 at the end - write down your Host Name, as you will need this later on.
-⚠️ NOTE: Whenever you are told to create a password, use the same password as everything.
-5 Leave Domain blank, press enter on Continue.
-6 Create a Password for the Host Name and retype it.
-7 Create a User Name without 42 at the end - write down your Host Name, as you will need this later on.
-8 Create a Password for the User Name (you might as well use the same password as your Host Password).
-9 Press enter on your Timezone.
-10 Press enter on Guided - use entire disk and set up encrypted LVM (Second to last option from the list).
-11 Press enter on Select Disk to Partition.
-12 Press enter on Select Separate /home, /var, and /tmp paritions (Last option from the list).
-13 Select Yes and press Enter to write the changes to disks and configure LVM.
-14 Press Enter to cancel Erasing.
-15 Create a Encryption passphrase.
-16 Retype the Encryption passphrase you just created.
-17 Type in ```max``` and press enter on Continue to assign the amount of volume group to use for guided partitioning.
-18 Press enter on Finish partitioning and write changes to disk.
-19 Press enter on Yes for Partition Disks.
-20 Press enter on No for Configure the package manager.
-21 Press enter in the country that your in.
-22 Press enter on deb.debian.org.
-23 Leave proxy information blank and press enter on continue.
-24 Press enter on no for Configuring popularity-contest.
-25 Deselect SSH server and standard system utilities by pressing the Space key and then Continue, (tab and enter).
-26 Press enter on Yes to Install the GRUB boot loader on a hard disk.
-27 Press enter on /dev/sda
-28 Press enter on continue to finish the installation.
+
+- 1 Press enter on English - English or your language of preference.
+- 2 Press enter the country your installing this Virtual Machine.
+- 3 Press enter your keyboard of preference.
+- 4 Create a Host Name as your login, with 42 at the end - write down your Host Name, as you will need this later on. <br><br>
+     ⚠️ NOTE: Whenever you are told to create a password, use the same password as everything.
+- 5 Leave Domain blank, press enter on Continue.
+- 6 Create a Password for the Host Name and retype it.
+- 7 Create a User Name without 42 at the end - write down your Host Name, as you will need this later on.
+- 8 Create a Password for the User Name (you might as well use the same password as your Host Password).
+- 9 Press enter on your Timezone.
+- 10 Press enter on Guided - use entire disk and set up encrypted LVM (Second to last option from the list).
+- 11 Press enter on Select Disk to Partition.
+- 12 Press enter on Select Separate /home, /var, and /tmp paritions (Last option from the list).
+- 13 Select Yes and press Enter to write the changes to disks and configure LVM.
+- 14 Press Enter to cancel Erasing.
+- 15 Create a Encryption passphrase.
+- 16 Retype the Encryption passphrase you just created.
+- 17 Type in ```max``` and press enter on Continue to assign the amount of volume group to use for guided partitioning.
+- 18 Press enter on Finish partitioning and write changes to disk.
+- 19 Press enter on Yes for Partition Disks.
+- 20 Press enter on No for Configure the package manager.
+- 21 Press enter in the country that your in.
+- 22 Press enter on deb.debian.org.
+- 23 Leave proxy information blank and press enter on continue.
+- 24 Press enter on no for Configuring popularity-contest.
+- 25 Deselect SSH server and standard system utilities by pressing the Space key and then Continue, (tab and enter).
+- 26 Press enter on Yes to Install the GRUB boot loader on a hard disk.
+- 27 Press enter on /dev/sda
+- 28 Press enter on continue to finish the installation.
 
 ⚠️ ADVICE: Before we move onto starting your Virtual Machine, make sure you remember your Host, Username and Password/s.
 
