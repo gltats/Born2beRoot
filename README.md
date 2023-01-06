@@ -17,20 +17,17 @@ Part 1.1 - First steps
 - Click Start (The Green Arrow ➡️) to start your Virtual Machine.
 
 Part 1.2 - Accessing Your Virtual Machine
-
-```
 ⚠️ NOTE:
+```
 - In the Virtual Machine, there is no mouse, so its necessary to use keyboard (You wil use mostly tab, space, enter 🔼 🔽).
 - To increase your Virtual Machine size, press command + c at the same time and then use your mouse to drag the screen to the size you wish.
 - Use the arrow keys on your keyboard 🔼 🔽 and press Enter on Install.
 ```
-
-
+⚠️ ADVICE:  ```Whenever you are told to create a password, use the same password as everything.```
 - 1 Press enter on English - English or your language of preference.
 - 2 Press enter the country your installing this Virtual Machine.
 - 3 Press enter your keyboard of preference.
 - 4 Create a Host Name as your login, with 42 at the end - write down your Host Name, as you will need this later on. <br><br>
-     ⚠️ NOTE: Whenever you are told to create a password, use the same password as everything.
 - 5 Leave Domain blank, press enter on Continue.
 - 6 Create a Password for the Host Name and retype it.
 - 7 Create a User Name without 42 at the end - write down your Host Name, as you will need this later on.
@@ -56,7 +53,7 @@ Part 1.2 - Accessing Your Virtual Machine
 - 27 Press enter on /dev/sda
 - 28 Press enter on continue to finish the installation.
 
-⚠️ ADVICE: Before we move onto starting your Virtual Machine, make sure you remember your Host, Username and Password/s.
+⚠️ ADVICE: ```Before we move onto starting your Virtual Machine, make sure you remember your Host, Username and Password/s.```
 
 Part 1.3 - Starting Your Virtual Machine
 - Press enter on Debian GNU/Linux
@@ -111,7 +108,7 @@ Type ```sudo service sshd status``` to check your SSH Status
 Open an iTerm and type the following ```ssh your_username@127.0.0.1 -p 4242```
 To quit your SSH iTerm Connection type ```exit```. Its possible and would say easier to continue doing this project on iTerm.
 
-## Part 3: BASH
+## Part 4: BASH and Crontab
 Create a monitoring.sh at /usr/local/bin
 
 ```
@@ -149,7 +146,16 @@ Create a monitoring.sh at /usr/local/bin
                #IPV & MAC adress: IP $ipv4_addres ($mac_address)
               #Commands executed with sudo: $sudo_commands "
 ```
-## Part 4: Evaluation
+- Type sudo visudo to open your sudoers file
+- Add in this line ```your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh``` under where its written ```%sudo ALL=(ALL:ALL) ALL``` at ```Allow members of group sudo to execute any command```
+- Then exit and save your sudoers file
+- Now type ```sudo reboot``` in your Virtual Machine to reboot sudo
+- Type ```bash monitoring.sh``` to execute your script.
+- Type ```sudo crontab -u root -e``` to open the crontab and add the rule
+- Lastly at the end of the crontab, type the following ```*/10 * * * * /usr/local/bin/monitoring.sh``` this means that every 10 mins, this script will show.
+
+## Part 5: Password
+## Part 6: Evaluation
 
 ## PD -> Please don't copy and paste, try to understand the whole process
 
