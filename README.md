@@ -210,88 +210,90 @@ Lastly type ``chmod 777 monitoring.sh``
                                            ##################################
 
 - What is virtual machine?
-- -> A Virtual Machine (VM) is a compute resource that uses software instead of a physical computer to run programs and deploy 
+--> A Virtual Machine (VM) is a compute resource that uses software instead of a physical computer to run programs and deploy 
 apps. Each virtual machine runs its own operating system and functions separately from the other VMs, even when they are all
 running on the same host. For example, you can run a virtual MacOS machine on a physical PC. 
 
 - What it's purpose?
-- -> VMs may be deployed to accommodate different levels of processing power needs, to run software that requires a different
+--> VMs may be deployed to accommodate different levels of processing power needs, to run software that requires a different
 operating system, or to test applications in a safe, sandboxed environment. 
 
 - How does it works?
-- -> VM working through "Virtualization" technology. Virtualization uses software to simulate virtual hardware that allows 
+--> VM working through "Virtualization" technology. Virtualization uses software to simulate virtual hardware that allows 
 VMs to run on a single host machine.
 
 - Diff between aptitude and apt?
-- -> Aptitude is a high-level package manager while APT is lower-level package manager which can be used by other 
+--> Aptitude is a high-level package manager while APT is lower-level package manager which can be used by other 
 higher-level package managers
 (read more: https://www.tecmint.com/difference-between-apt-and-aptitude/)
 
 - What is AppArmor?
-- -> AppArmor ("Application Armor") is a Linux kernel security module that allows the system administrator to restrict programs'
+--> AppArmor ("Application Armor") is a Linux kernel security module that allows the system administrator to restrict programs'
 capabilities with per-program profiles.
 (read more: https://en.wikipedia.org/wiki/AppArmor)
 
 - What is SSH?
-- -> SSH, also known as Secure Shell or Secure Socket Shell, is a network protocol that gives users, particularly system 
+--> SSH, also known as Secure Shell or Secure Socket Shell, is a network protocol that gives users, particularly system 
 administrators, a secure way to access a computer over an unsecured network.
 (read more: https://searchsecurity.techtarget.com/definition/Secure-Shell)
 
 - What is SELinux?
+--> Security-Enhanced Linux (SELinux) is a security architecture for Linux® systems that allows administrators to have more control 
+over who can access the system. 
 
 - What is UWF?
+--> Is a firewall configuration tool that runs on top of iptables , included by default within Ubuntu distributions. It provides a streamlined interface for configuring common firewall use cases via the command line.
 
-/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
-| You have to create a new user here.        |
-| $ sudo adduser username                    | <- creating new user (yes (no))
-| $ sudo chage -l username                   | <- Verify password expire info for new user
-| $ sudo adduser username sudo               |
-| $ sudo adduser username user42             | <- assign new user to sudo and user42 groups
-\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+- How your script works?
+--> ... README.md / Part 8
 
-Q: How your script works?
-- -> ... README.md / Part 8
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+| You have to create a new user here.        |<br>
+| $ sudo adduser username                    | <- creating new user (yes (no)) <br>
+| $ sudo chage -l username                   | <- Verify password expire info for new user<br>
+| $ sudo adduser username sudo               | <br>
+| $ sudo adduser username user42             | <- assign new user to sudo and user42 groups<br>
+\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
                                            ##################################
                                            #         What to check?         #
                                            ##################################
-|***************************************|
-| 1) lsblk                              1 <- Check partitions
-| 2) getent group sudo                  2 <- sudo group users
-| 3) getent group user42                3 <- user42 group users
-| 4) sudo service ssh status            4 <- ssh status, yep
-| 5) sudo ufw status                    5 <- ufw status
-| 6) ssh username@ipadress -p 4242      6 <- connect to VM from your host (physical) machine via SSH
-| 7) nano /etc/sudoers.d/<filename>     7 <- yes, sudo config file. You can $ ls /etc/sudoers.d first
-| 8) nano /etc/login.defs               8 <- password expire policy
-| 9) nano /etc/pam.d/common-password    9 <- password policy
-| 10) sudo crontab -l                  10 <- cron schedule
-|***************************************|
 
-                                          |*************************************************************|
- 1 [$sudo nano /etc/hostname]  -------->  1)  change hostname
- 2 [$cd /var/log/sudo/00/00 && ls]----->  2)  Where is sudo logs in /var/log/sudo?
- 3 [$ sudo apt update] ---------------->  3
- 4 [$ ls]                                 4
- 5 [$ cd <nameofnewdirectory> && ls] -->  5)  Now you see that we have a new directory here.
- 6 [$ cat log] <- Input log               6
- 7 [$ cat ttyout] <- Output log           7
- 8 [$ sudo ufw allow 8080]  ----------->  8)  allow   How to add and remove port 8080 in UFW?
- 9 [$ sudo ufw status] ---------------->  9)  check
- 10 [$ sudo ufw deny 8080]  ----------->  10) deny (yes yes)
-                                          |*************************************************************|
+ 1) lsblk                              <- check partitions<br>
+ 2) getent group sudo                  <- sudo group users<br>
+ 3) getent group user42                <- user42 group users<br>
+ 4) sudo service ssh status            <- ssh status, yep <br>
+ 5) sudo ufw status                    <- ufw status <br>
+ 6) ssh username@ipadress -p 4242      <- connect to VM from your host (physical) machine via SSH <br>
+ 7) nano /etc/sudoers.d/<filename>     <- yes, sudo config file. You can $ ls /etc/sudoers.d first <br>
+ 8) nano /etc/login.defs               <- password expire policy <br>
+ 9) nano /etc/pam.d/common-password    <- password policy <br>
+ 10) sudo crontab -l                   <- cron schedule <br>
+********************************************************************************************************
 
+ 1 [$sudo nano /etc/hostname]  -------->  Change hostname                               
+ 2 [$cd /var/log/sudo/00/00 && ls]----->  Where is sudo logs in /var/log/sudo?          
+ 3 [$ sudo apt update]                                                                  
+ 4 [$ ls]                                                                               
+ 5 [$ cd <nameofnewdirectory> && ls] -->  Now you see that we have a new directory here.
+ 6 [$ cat log] <- Input log                                                             
+ 7 [$ cat ttyout] <- Output log                                                         
+ 8 [$ sudo ufw allow 8080]  ----------->  8)  allow port 8080 in UFW                    
+ 9 [$ sudo ufw status] ---------------->  9)  check                                     
+ 10 [$ sudo ufw deny 8080]  ----------->  10) deny (yes yes)                            
+******************************************************************************************
 
-[$ sudo crontab -e]                How to run script every 30 seconds?
-|*************************************************|
-| */1 * * * * /path/to/monitoring.sh              |
-| */1 * * * * sleep 30s && /path/to/monitoring.sh |
-|*************************************************|
-                          
-To stop script running on boot          To restart it
-|********************************|     |********************************|
-| $ sudo service cron stop       |     | $ sudo service cron restart    |
-|********************************|     |********************************|
+Crontab
+- How to run script every 30 seconds?<br>
+```[$ sudo crontab -e]```         <br>
+*/1 * * * * /path/to/monitoring.sh <br>
+*/1 * * * * sleep 30s && /path/to/monitoring.sh <br>
+
+- To stop script running on boot
+```$ sudo service cron stop ```
+
+- To restart it
+```$ sudo service cron restart ```
 
 ## PD -> Please don't copy and paste, try to understand the whole process
 
