@@ -248,11 +248,11 @@ over who can access the system.
 --> ... README.md / Part 8
 
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
-| You have to create a new user here.        |<br>
-| $ sudo adduser username                    | <- creating new user (yes (no)) <br>
-| $ sudo chage -l username                   | <- Verify password expire info for new user<br>
-| $ sudo adduser username sudo               | <br>
-| $ sudo adduser username user42             | <- assign new user to sudo and user42 groups<br>
+  You have to create a new user here.        <br>
+  $ sudo adduser username             <----- creating new user (yes (no)) <br>
+  $ sudo chage -l username            <----- Verify password expire info for new user<br>
+  $ sudo adduser username sudo               <br>
+  $ sudo adduser username user42      <----- Assign new user to sudo and user42 groups<br>
 \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
                                            ##################################
