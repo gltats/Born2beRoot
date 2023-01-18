@@ -115,7 +115,7 @@ To quit your SSH iTerm Connection type ```exit```. Its possible and would say ea
 - Add this to the end of that line `minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
 - The line should now look like this ``- password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root``
 - Save and Exit
-- Next type in your Virtual Machine ```sudo vim /etc/login.defs```
+- Next type in your Virtual Machine ```sudo nano /etc/login.defs```
 - Find this part ``PASS_MAX_DAYS 9999 PASS_MIN_DAYS 0 PASS_WARN_AGE 7``
 - Change that part to ``PASS_MAX_DAYS 30`` and ``PASS_MIN_DAYS 2`` keep ``PASS_WARN_AGE 7`` as the same
 - Lastly type ``sudo reboot`` to reboot the change affects
@@ -201,6 +201,14 @@ Then type touch ``monitoring.sh``
 Lastly type ``chmod 777 monitoring.sh``
 - Type ```sudo crontab -u root -e``` to open the crontab and add the rule
 - Lastly at the end of the crontab, type the following ```*/10 * * * * /usr/local/bin/monitoring.sh``` this means that every 10 mins, this script will show.
+
+
+#### ❗ SIDE NOTE ->
+- ```nano``` is an editor, you can use ```vim```
+- I recommend to set up the SSH as soon as possible and work from your computer's terminal, as the VM does not have mouse, does not allow to scroll or copy and paste. 
+
+
+
 
 
 
