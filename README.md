@@ -1,6 +1,10 @@
 # Born2beRoot
 42 project that aims to introduce to the world of virtualization
 
+## Status:
+- Actual status:  finished.
+- Result : 100%
+
 ## Part 1: Setting up a VM with partitions
 Part 1.1 - First steps
 - Open the VM and click on New
